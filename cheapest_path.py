@@ -5,7 +5,6 @@ import networkx as nx
 def vcg_cheapest_path(graph, source, target):
     """
     *************example from class*************
-
     >>> g = nx.Graph()
     >>> edges = [('a', 'b', 3), ('a', 'c', 5), ('a', 'd', 10), ('b', 'c', 1), ('b','d',4), ('c', 'd', 1)]
     >>> g.add_weighted_edges_from(edges)
@@ -16,7 +15,6 @@ def vcg_cheapest_path(graph, source, target):
     The edge ('b', 'c') pays: -2
     The edge ('b', 'd') pays: 0
     The edge ('c', 'd') pays: -3
-
     >>> vcg_cheapest_path(g,'b','c')
     The edge ('a', 'b') pays: 0
     The edge ('a', 'c') pays: 0
@@ -43,13 +41,12 @@ def vcg_cheapest_path(graph, source, target):
     The edge (2, 4) pays: 0
     The edge (2, 3) pays: 0
     The edge (3, 4) pays: -6
-
+    
     *************no edge test*************
     >>> vcg_cheapest_path(g2,1,6)
     Traceback (most recent call last):
     ...
     networkx.exception.NetworkXNoPath: No path to 6.
-
     >>> g3 = nx.Graph()
     >>> g3.add_nodes_from(range(1, 4))
     >>> g3.add_weighted_edges_from([(1, 2, 1), (1, 3, 2), (2, 3, 7)])
@@ -57,7 +54,6 @@ def vcg_cheapest_path(graph, source, target):
     The edge (1, 2) pays: 0
     The edge (1, 3) pays: -8
     The edge (2, 3) pays: 0
-
     >>> g4 = nx.Graph()
     >>> g4.add_nodes_from(range(1, 4))
     >>> g4.add_weighted_edges_from([(1, 2, 5), (1, 3, 4), (2, 3, 8)])
@@ -65,7 +61,6 @@ def vcg_cheapest_path(graph, source, target):
     The edge (1, 2) pays: 0
     The edge (1, 3) pays: -13
     The edge (2, 3) pays: 0
-
     >>> g5 = nx.Graph()
     >>> g5.add_nodes_from(range(1, 4))
     >>> g5.add_weighted_edges_from([(1, 2, 3), (1, 3, 6), (2, 3, 2)])
